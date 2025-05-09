@@ -9,8 +9,8 @@ public class PostSummaryView {
         if (posts.isEmpty()) {
             System.out.println("\nNo posts available.");
         } else {
-            System.out.println("\n--- Posts ---");
-            posts.forEach(post -> System.out.printf("📝 %d - %s\nPreview: %s...\n",
+            System.out.println("\nPosts");
+            posts.forEach(post -> System.out.printf("\n\n 📝 %d - %s\nPreview: %s...",
                     post.id(), post.author(), post.contentPreview()));
         }
     }

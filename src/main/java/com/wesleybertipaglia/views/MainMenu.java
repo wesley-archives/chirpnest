@@ -1,8 +1,10 @@
 package com.wesleybertipaglia.views;
 
 import com.wesleybertipaglia.controllers.PostController;
+import com.wesleybertipaglia.helpers.ConsoleHelper;
 
 import java.util.Scanner;
+import java.util.logging.LogManager;
 
 public class MainMenu {
 
@@ -10,6 +12,11 @@ public class MainMenu {
     private static final PostController postController = new PostController();
 
     public static void main(String[] args) {
+        LogManager.getLogManager().reset();
+        ConsoleHelper.clearConsole();
+        ConsoleHelper.printHeader("🐦 Welcome to ChirpNest!");
+        System.out.println("Your social media platform for sharing thoughts and ideas.");
+
         while (true) {
             showMenu();
             String choice = scanner.nextLine();
@@ -18,9 +25,8 @@ public class MainMenu {
     }
 
     private static void showMenu() {
-        System.out.println("\n-------------------------------------");
-        System.out.println("🐦 CHIRPNEST POST MENU");
-        System.out.println("\n-------------------------------------");
+        System.out.println("\n" + "-".repeat(40) + "\n");
+        System.out.println("📋 Main Menu:");
         System.out.println("1. List all posts");
         System.out.println("2. View post details");
         System.out.println("3. Create a new post");
