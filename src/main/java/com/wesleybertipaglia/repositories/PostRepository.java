@@ -5,8 +5,7 @@ import java.util.List;
 import com.wesleybertipaglia.entities.Post;
 import com.wesleybertipaglia.settings.Database;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.TypedQuery;
+import jakarta.persistence.*;
 
 public class PostRepository {
 
